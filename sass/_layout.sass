@@ -1,0 +1,367 @@
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+body
+    background: $clrBackground
+    padding: 0px
+    font-family: $fontPrimary
+    color: $clrText
+    font-size: 14px
+
+a, a:visited
+    color: $clrPrimary
+    text-decoration: none
+    +transition(all 0.2s ease-in-out)
+
+a:hover, a:focus, a:active
+    color: $clrSecondary
+    text-decoration: none
+
+hr
+    margin: 15px 0
+    border: 0
+    border-bottom: 1px solid $clrBright
+
+.img-fit img
+    width: 100%
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.home header
+    background: transparent 
+    
+header
+    position: relative
+    z-index: 1000
+    width: 100%
+    background: image-url("headers/banner1.jpg") #f1f1f1
+    background-size: cover
+
+    .container
+        position: relative
+
+        h1
+            margin: 0
+            line-height: 0
+
+        h1 a.logo
+            display: block
+            float: left
+            left: 0
+            width: 200px
+            height: 50px
+            background: image-url("logo.png") no-repeat
+            
+
+// NAVIGATION ----------------------------->
+nav.navbar
+    margin-bottom: 0
+    padding: 7px 0 4px
+    +border-radius(0)
+    background: transparent
+
+    a, a:visited
+        color: $clrBrightest
+        &:hover
+            color: $clrBrightest
+            text-decoration: none
+
+    .nav
+        display: inline-block
+        & > li
+            display: inline-block
+            position: relative
+            padding: 5px 0
+            & > a
+                padding: 8px 15px
+                +border-radius(10px)
+                text-transform: uppercase
+                margin-left: 5px
+                &:hover
+                    background-color: $clrPrimary
+
+        //Active State --
+        .active > a,
+        .current_page_item > a,
+        .current_page_ancestor > a,
+        .current-menu-item > a,
+        .current-menu-ancestor > a
+            color: $clrBrightest
+            background-color: $clrPrimary
+            text-decoration: none
+
+        //Sub-Menu --
+        .menu-toggle
+            display: none
+
+        .sub-menu
+            top: 30px
+
+        .sub-menu,
+        .children
+            background-color: $clrBright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 3000
+            list-style: none
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $clrDark
+                a
+                    color: $clrBrightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
+
+                &:hover
+                    background: $clrSecondary
+                    color: $clrBrightest
+                    a
+                        color: $clrBrightest
+                          
+      
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+      
+            //HOVER ACTIVATION
+            li:hover > ul, li:hover > ul
+                display: block
+                
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+
+#main #banner
+    overflow: hidden
+    position: relative
+    padding: 0
+    margin-top: -95px
+
+
+.carousel
+
+    .container
+        position: relative
+        z-index: 9
+
+    .down-button
+        position: absolute
+        bottom: 40px
+        left: 47.5%
+        z-index: 10
+        width: 80px
+        height: 80px
+        line-height: 80px
+        font-size: 30px
+        color: $clrBrightest
+
+    .item
+        height: 700px
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            min-width: 100%
+            height: 100%
+
+    .carousel-caption
+        background-color: transparent
+        width: 600px
+        margin: 0 auto
+        top: 20%
+
+        h1, .carousel-caption p
+            margin: 0
+            line-height: 1.25
+            color: #fff
+            text-shadow: 0 1px 1px rgba(0,0,0,.4)
+
+        h1
+            font-size: 50px
+        p
+            font-size: 22px
+        a.btn
+            padding: 10px 20px
+            font-size: 20px
+            text-transform: uppercase
+            background-color: transparent
+            border: 2px solid $clrBrightest
+            color: $clrBrightest
+            margin-top: 15px
+
+
+    .carousel-control
+        z-index: 5
+
+        .glyphicon-chevron-left, .glyphicon-chevron-right
+            top: 44%
+            background: $clrDarkest
+            height: 80px
+            width: 50px
+            line-height: 77px
+            color: $clrBrightest
+
+        .glyphicon-chevron-left
+            left: 0
+        .glyphicon-chevron-right
+            right: 0
+
+
+/* Page Heading */
+.page-intro
+    background: image-url("headers/banner1.jpg")
+    background-size: cover
+    color: $clrBrightest
+
+    .tint
+        padding: 30px 0
+        position: relative
+
+    .col-md-6:last-child
+        text-align: right
+
+    .col-md-6 a, .page-intro .col-md-6 h1
+        color: $clrBrightest
+
+    .col-md-6 h1
+        margin-bottom: 0
+
+.breadcrumb
+    background: transparent
+    line-height: 40px
+    margin-bottom: 0
+
+
+
+/* ==========================================================================
+   Main Body, Content Area
+   ========================================================================== */
+#main section
+    padding: 80px 0
+
+
+.main-body
+    padding: 40px 0
+// .primary, .secondary
+
+
+.secondary
+    aside
+        margin-bottom: 30px
+    h3
+        color: $clrText
+        margin-bottom: 5px
+    ul
+        padding-left: 0
+        margin-left: 0
+        margin-bottom: 35px
+    ul li
+        list-style: none
+        border-bottom: 1px solid $clrBright
+        line-height: 40px
+        margin-bottom: 0
+        a
+            color: $clrText
+            &:hover
+                color: $clrPrimary
+                text-decoration: none
+
+        &.current_page_item > a,
+        &.current_page_ancestor > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a
+            color: $clrPrimary
+
+        ul ul li
+            border-bottom: none
+            line-height: 30px
+            padding-left: 20px
+
+    // li:before
+    //     font-family: 'FontAwesome'
+    //     content: '\f105'
+    //     margin: 0 10px 0 -15px
+
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer
+    background: $clrDarkest
+
+    hr
+        border-bottom: 1px solid $clrDark
+        margin: 5px 0
+
+    .container .row
+        padding: 25px 0
+
+        ul
+            padding-left: 0
+            padding-top: 5px
+
+            li
+                list-style: none
+                float: left
+                a
+                    color: $clrText
+                    text-decoration: none
+                    padding: 0 10px
+
+                    &:hover
+                        color: $clrPrimary
+                        text-decoration: none
+                &:after
+                    content: "|"
+                    color: $clrText
+                    &:after:last-child
+                        content: " "
+
+
+        .social
+            text-align: center
+            a
+                width: 30px
+                height: 30px
+                border-radius: 50%
+                font-size: 100%
+                background: $clrText
+                line-height: 30px
+                display: block
+                margin-right: 15px
+                padding: 0 10px
+                float: right
+                color: $clrBright
+
+                &:hover
+                    background: $clrPrimary
+                    text-decoration: none
+            a:first-child
+                margin-right: 0
+
+        .copyright
+            text-align: center
+            font-size: 11px
+            color: $clrText
+
+    .row:last-child
+        padding: 20px 0
+

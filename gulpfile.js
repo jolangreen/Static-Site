@@ -40,7 +40,7 @@ gulp.task('scripts', function() {
 // Compile Sass using compass
 gulp.task('styles', function() {
    return gulp.src('sass/*.scss')
-     .pipe(compass({ config_file: './config.rb', css: '', sass: 'sass' }))
+     .pipe(compass({ config_file: './config.rb', css: 'assets/css', sass: 'sass' }))
      .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
      .pipe(livereload())
      .pipe(rename({suffix: '.min'}))
@@ -93,7 +93,7 @@ gulp.task('watch', function() {
   var server = livereload();
 
   // Watch any files in assets/, reload on change
-  gulp.watch(['assets/**', 'template-sample.html']).on('change', function(file) {
+  gulp.watch(['assets/**', 'index.html']).on('change', function(file) {
     server.changed(file.path);
   });
 

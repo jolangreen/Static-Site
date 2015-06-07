@@ -83,10 +83,10 @@ gulp.task('watch', function() {
   gulp.watch('sass/*.sass', ['styles']);
 
   // Watch .js files
-  gulp.watch('public_html/js/*.js', ['scripts']);
+  gulp.watch('js/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch('public_html/images/**/*', ['images']);
+  gulp.watch('public_html/assets/images/**/*', ['images']);
 
   // Create LiveReload server
   var server = livereload();
@@ -97,7 +97,7 @@ gulp.task('watch', function() {
   });
 
   livereload.listen();
-  gulp.watch(['sass/**', 'public_html/index.html']).on('change', livereload.changed);
+  gulp.watch(['sass/**', 'js/*.js', 'public_html/index.html']).on('change', livereload.changed);
 
 });
 

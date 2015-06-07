@@ -86,7 +86,7 @@ gulp.task('watch', function() {
   gulp.watch('js/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch('public_html/assets/images/**/*', ['images']);
+  //gulp.watch('public_html/assets/images/**/*', ['images']);
 
   // Create LiveReload server
   var server = livereload();

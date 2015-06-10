@@ -15,6 +15,12 @@ $clrDarkest: #111;
 $fontPrimary: 'robotoregular', Arial, Helvetica, Sans-serif;
 $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
 
+//Screen Sizes
+$screen-xs: 320px;
+$screen-sm: 360px;
+$screen-md: 769px;
+$screen-lg: 1024px;
+
 @mixin position($top, $right, $bottom, $left, $pos: absolute) {
     position: $pos;
     top: $top;

@@ -2,6 +2,79 @@
    MODULES
    ========================================================================== */
 
+
+// Gallery
+.gallery-block
+    .gallery-item
+        padding-left: 0
+        padding-right: 0
+        .image
+            height: 290px
+
+
+//Listed Content
+.listed-content
+    .listed-content-icon, .listed-content-image
+        margin-bottom: 20px
+
+
+
+//Background
+.background-block
+    overflow: hidden
+    padding: 100px 0 
+    position: relative
+    img
+        left: 0
+        min-width: 100%
+        position: absolute
+        top: 0px
+        z-index: -1
+    p
+        margin-bottom: 25px
+
+
+//Callout
+.callout
+    overflow: hidden
+    padding: 130px 0 
+    position: relative
+    text-align: center
+    background: $clrSecondary
+    h2, p
+        margin-bottom: 25px
+        color: $clrBrightest
+    h2
+        font-size: 50px
+
+
+
+/* Page Heading */
+.page-intro
+    background: image-url("headers/banner1.jpg")
+    background-size: cover
+    color: $clrBrightest
+
+    .tint
+        padding: 30px 0
+        position: relative
+
+    .col-md-6:last-child
+        text-align: right
+
+    .col-md-6 a, .page-intro .col-md-6 h1
+        color: $clrBrightest
+
+    .col-md-6 h1
+        margin-bottom: 0
+
+.breadcrumb
+    background: transparent
+    line-height: 40px
+    margin-bottom: 0
+
+
+
 // Pagination
 .pagination .page-numbers
     padding: 10px
@@ -35,126 +108,6 @@ nav .nav-links a
         float: right
 
 
-// Gallery
-.gallery-area
-    .col-md-4
-        padding-left: 0
-        padding-right: 0
-    .image
-        height: 290px
-
-
-
-// Icon
-.block-icon
-    width: 40px
-    height: 40px
-    line-height: 40px
-    font-size: 100%
-    text-align: center
-    background: $clrPrimary
-    color: $clrBrightest
-    +border-radius(50%)
-    margin: 0 auto
-    display: block
-
-.block-icon-o
-    width: 40px
-    height: 40px
-    line-height: 40px
-    font-size: 100%
-    text-align: center
-    background: transparent
-    color: $clrBrightest
-    border: 2px solid $clrBrightest
-    +border-radius(50%)
-    margin: 0 auto
-    display: block
-
-.block-icon.large
-    width: 70px
-    height: 70px
-    line-height: 70px
-    font-size: 30px
-
-.block-body
-    h3
-        margin-top: 20px
-        margin-bottom: 10px
-
-.social .block-icon
-    display: inline-block    
-
-// Image Hover
-.image
-    display: block
-    height: 190px
-    margin-bottom: 20px
-    overflow: hidden
-    img
-        position: absolute
-        width: 100%
-        min-height: 100%
-
-.image-hover-fx
-    position: relative
-    overflow: hidden
-
-    .image-overlay
-        background-color: $clrPrimary
-        width: 100%
-        height: 100%
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        opacity: 0
-        filter: alpha(opacity=0)
-        -webkit-transition: all 0.2s ease
-        transition: all 0.2s ease
-
-    .portfolio-zoom
-        width: 65px
-        height: 65px
-        text-align: center
-        background-color: $clrDarkest
-        display: none
-        line-height: 65px
-        position: absolute
-        top: 50%
-        left: -65px
-        margin-top: -22px
-        font-size: 30px
-        color: #fff
-        display: block
-        border-radius: 2px
-        &:hover
-            background: $clrPrimary
-
-    .title-fx
-        position: absolute
-        bottom: 15%
-        color: white
-        text-align: center
-        width: 100%
-        font-size: 20px
-        opacity: 0
-
-// Hover Effects
-.image-item:hover .image-hover-fx .image-overlay
-    opacity: 0.50
-    filter: alpha(opacity=50)
-
-.image-item:hover .image-hover-fx .portfolio-zoom
-    display: block
-    left: 50%
-    margin-left: -35px
-    -webkit-transition: all 0.2s ease
-    transition: all 0.2s ease
-
-.image-item:hover .image-hover-fx .title-fx
-    opacity: 1
-    transition: all 0.3s ease
 
 
 /* ==========================================================================

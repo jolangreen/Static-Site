@@ -114,122 +114,15 @@ nav.navbar
             li:hover > ul, li:hover > ul
                 display: block
                 
-/* ==========================================================================
-   Banner
-   ========================================================================== */
-
-#main #banner
-    overflow: hidden
-    position: relative
-    padding: 0
-    margin-top: -95px
-
-
-.carousel
-
-    .container
-        position: relative
-        z-index: 9
-
-    .down-button
-        position: absolute
-        bottom: 40px
-        left: 47.5%
-        z-index: 10
-        width: 80px
-        height: 80px
-        line-height: 80px
-        font-size: 30px
-        color: $clrBrightest
-
-    .item
-        height: 700px
-
-        img
-            position: absolute
-            top: 0
-            left: 0
-            min-width: 100%
-            height: 100%
-
-    .carousel-caption
-        background-color: transparent
-        width: 600px
-        margin: 0 auto
-        top: 20%
-
-        h1, .carousel-caption p
-            margin: 0
-            line-height: 1.25
-            color: #fff
-            text-shadow: 0 1px 1px rgba(0,0,0,.4)
-
-        h1
-            font-size: 50px
-        p
-            font-size: 22px
-        a.btn
-            padding: 10px 20px
-            font-size: 20px
-            text-transform: uppercase
-            background-color: transparent
-            border: 2px solid $clrBrightest
-            color: $clrBrightest
-            margin-top: 15px
-
-
-    .carousel-control
-        z-index: 5
-
-        .glyphicon-chevron-left, .glyphicon-chevron-right
-            top: 44%
-            background: $clrDarkest
-            height: 80px
-            width: 50px
-            line-height: 77px
-            color: $clrBrightest
-
-        .glyphicon-chevron-left
-            left: 0
-        .glyphicon-chevron-right
-            right: 0
-
-
-/* Page Heading */
-.page-intro
-    background: image-url("headers/banner1.jpg")
-    background-size: cover
-    color: $clrBrightest
-
-    .tint
-        padding: 30px 0
-        position: relative
-
-    .col-md-6:last-child
-        text-align: right
-
-    .col-md-6 a, .page-intro .col-md-6 h1
-        color: $clrBrightest
-
-    .col-md-6 h1
-        margin-bottom: 0
-
-.breadcrumb
-    background: transparent
-    line-height: 40px
-    margin-bottom: 0
-
 
 
 /* ==========================================================================
    Main Body, Content Area
    ========================================================================== */
-#main section
+section
     padding: 80px 0
 
 
-.main-body
-    padding: 40px 0
 // .primary, .secondary
 
 
@@ -271,6 +164,39 @@ nav.navbar
     //     margin: 0 10px 0 -15px
 
 
+// ----- LIST -----
+.primary article
+    ul
+        list-style-type: none
+        padding-left: 15px
+
+        li:before
+            font-family: 'FontAwesome'
+            content: '\f058'
+            margin: 0 5px 0 -15px
+
+        li
+            margin-bottom: 15px
+
+    ol li:before
+        content: none
+
+
+
+// ----- TABLE -----
+article table
+    thead tr
+        background: $clrPrimary
+        color: $clrBrightest
+
+    tr:nth-child(2n)
+        background: #e0e3e5
+
+    tr
+        background: #f1f1f1
+
+    tr td
+        padding: 5px 10px
 
 
 /* ==========================================================================

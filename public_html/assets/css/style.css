@@ -1,329 +1,54 @@
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-/* ========================================================================== CSS Reset ========================================================================== */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
-
-audio, canvas, video { display: inline-block; }
-
-audio:not([controls]) { display: none; height: 0; }
-
-[hidden], template { display: none; }
-
-/* ----- Base Reset ----- */
-html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
-
-body { margin: 0; }
-
-/* ----- Links Reset ----- */
-a { background: transparent; }
-
-a:focus { outline: thin dotted; }
-
-a:active, a:hover { outline: 0; }
-
-/* ----- Typography Reset ----- */
-h1 { font-size: 2em; margin: 0.67em 0; }
-
-abbr[title] { border-bottom: 1px dotted; }
-
-b, strong { font-weight: bold; }
-
-dfn { font-style: italic; }
-
-hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
-
-mark { background: #ff0; color: #000; }
-
-code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
-
-pre { white-space: pre-wrap; }
-
-q { quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-small { font-size: 80%; }
-
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-
-sup { top: -0.5em; }
-
-sub { bottom: -0.25em; }
-
-/* ----- Embedded content Reset ----- */
-img { border: 0; }
-
-svg:not(:root) { overflow: hidden; }
-
-/* ----- Figures Reset ----- */
-figure { margin: 0; }
-
-/* ----- Forms Reset ----- */
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
-
-legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
-
-button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
-
-button, input { line-height: normal; }
-
-button, select { text-transform: none; }
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
-
-button[disabled], html input[disabled] { cursor: default; }
-
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
-
-input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-
-textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
-
-/* ----- Tables Reset ----- */
-table { border-collapse: collapse; border-spacing: 0; }
-
-/* Clears floating elements */
-/* For modern browsers */
-.cf:before, .cf:after { content: ""; display: table; }
-
-.cf:after { clear: both; }
-
-/* For IE 6/7 (triggers hasLayout) */
-.cf { *zoom: 1; }
-
-.clear { clear: both; }
-
-/* ========================================================================== GLOBAL ========================================================================== */
-body { background: white; padding: 0px; font-family: "robotoregular", Arial, Helvetica, Sans-serif; color: #8c989e; font-size: 16px; }
-
-a, a:visited { color: #1fae4a; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-
-a:hover, a:focus, a:active { color: #4ec0c2; text-decoration: none; }
-
-hr { margin: 15px 0; border: 0; border-bottom: 1px solid #e1e1e1; }
-
-/*___________________________ FORMS ___________________________ */
-form input[type="text"], form input[type="email"], form input[type="url"], form textarea { width: 100%; height: 30px; padding: 4px; background: white; border: 1px solid #e1e1e1; color: #8c989e; font-size: 13px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; margin-bottom: 15px; }
-form textarea { height: 100px; }
-form input[type="button"], form input[type="submit"] { height: 36px; padding: 8px; background: #1fae4a; cursor: pointer; cursor: hand; border: none; color: white; font-size: 14px; -moz-border-radius: 5px; border-radius: 5px; }
-form input[type="button"]:hover, form input[type="submit"]:hover { background-color: #4ec0c2; }
-
-form.search-form label { display: inline; }
-form.search-form .screen-reader-text { display: none; }
-form.search-form input.search-field { border: none; background: #f2f2f2; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; color: #616161; font-size: 12px; padding: 13px 22px; width: 60%; }
-form.search-form input[type="submit"] { padding: 11px 16px; font-size: 14px; height: auto; background: #1fae4a; }
-
-/*___________________________ TYPOGRAPHY ___________________________ */
-@font-face { font-family: "robotoregular"; src: url('../fonts/roboto-regular-webfont.eot') format('embedded-opentype'), url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-regular-webfont.woff') format('woff'), url('../fonts/roboto-regular-webfont.ttf') format('truetype'), url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg'); }
-
-@font-face { font-family: "HelveticaNeueThin"; src: url('../fonts/hlt____-webfont.eot') format('embedded-opentype'), url('../fonts/hlt____-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/hlt____-webfont.woff') format('woff'), url('../fonts/hlt____-webfont.ttf') format('truetype'), url('../fonts/hlt____-webfont.svg#HelveticaNeueThin') format('svg'); }
-
-::selection { background: #1fae4a; color: white; text-shadow: none; }
-
-::-webkit-selection { background: #1fae4a; color: white; text-shadow: none; }
-
-::-moz-selection { background: #1fae4a; color: white; text-shadow: none; }
-
-h1, h2, h3, h4, h5, h6 { font-family: "HelveticaNeueThin", Arial, Helvetica, Sans-serif; color: #333333; font-weight: normal; margin-top: 0; }
-
-h1 { font-size: 40px; margin-bottom: 25px; }
-
-h2 { font-size: 36px; margin-bottom: 15px; }
-
-h3 { font-size: 28px; margin-bottom: 7px; }
-
-p { margin-bottom: 20px; }
-
-/* ========================================================================== Header ========================================================================== */
-.home header { background: transparent; }
-
-header { position: relative; z-index: 1000; width: 100%; background: url('../images/headers/banner1.jpg?1433898993') #f1f1f1; background-size: cover; }
-header .container { position: relative; }
-header .container h1 { margin: 0; line-height: 0; }
-header .container h1 a.logo { display: block; float: left; left: 0; width: 200px; height: 50px; background: url('../images/logo.png?1433898993') no-repeat; }
-
-nav.navbar { margin-bottom: 0; padding: 7px 0 4px; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; background: transparent; }
-nav.navbar a, nav.navbar a:visited { color: white; }
-nav.navbar a:hover, nav.navbar a:visited:hover { color: white; text-decoration: none; }
-nav.navbar .nav { display: inline-block; }
-nav.navbar .nav > li { display: inline-block; position: relative; padding: 5px 0; }
-nav.navbar .nav > li > a { padding: 8px 15px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; text-transform: uppercase; margin-left: 5px; }
-nav.navbar .nav > li > a:hover { background-color: #1fae4a; }
-nav.navbar .nav .active > a, nav.navbar .nav .current_page_item > a, nav.navbar .nav .current_page_ancestor > a, nav.navbar .nav .current-menu-item > a, nav.navbar .nav .current-menu-ancestor > a { color: white; background-color: #1fae4a; text-decoration: none; }
-nav.navbar .nav .menu-toggle { display: none; }
-nav.navbar .nav .sub-menu { top: 30px; }
-nav.navbar .nav .sub-menu, nav.navbar .nav .children { background-color: #e1e1e1; border-top: 0; display: none; padding: 0; position: absolute; left: -2px; z-index: 3000; list-style: none; }
-nav.navbar .nav .sub-menu li, nav.navbar .nav .children li { padding: 6px 5px; text-align: center; border-bottom: 1px solid #555555; background: #333333; }
-nav.navbar .nav .sub-menu li a, nav.navbar .nav .children li a { color: white; margin: 0; display: block; min-width: 200px; text-decoration: none; }
-nav.navbar .nav .sub-menu li:hover, nav.navbar .nav .children li:hover { background: #4ec0c2; color: white; }
-nav.navbar .nav .sub-menu li:hover a, nav.navbar .nav .children li:hover a { color: white; }
-nav.navbar .nav .sub-menu .sub-menu ul, nav.navbar .nav .sub-menu .children ul, nav.navbar .nav .children .sub-menu ul, nav.navbar .nav .children .children ul { border-left: 0; left: 100%; top: 0px; }
-nav.navbar .nav .sub-menu li:hover > ul, nav.navbar .nav .sub-menu li:hover > ul, nav.navbar .nav .children li:hover > ul, nav.navbar .nav .children li:hover > ul { display: block; }
-
-/* ========================================================================== Main Body, Content Area ========================================================================== */
-section { padding: 80px 0; }
-
-.secondary aside { margin-bottom: 30px; }
-.secondary h3 { color: #8c989e; margin-bottom: 5px; }
-.secondary ul { padding-left: 0; margin-left: 0; margin-bottom: 35px; }
-.secondary ul li { list-style: none; border-bottom: 1px solid #e1e1e1; line-height: 40px; margin-bottom: 0; }
-.secondary ul li a { color: #8c989e; }
-.secondary ul li a:hover { color: #1fae4a; text-decoration: none; }
-.secondary ul li.current_page_item > a, .secondary ul li.current_page_ancestor > a, .secondary ul li.current-menu-item > a, .secondary ul li.current-menu-ancestor > a { color: #1fae4a; }
-.secondary ul li ul ul li { border-bottom: none; line-height: 30px; padding-left: 20px; }
-
-.primary article ul { list-style-type: none; padding-left: 15px; }
-.primary article ul li:before { font-family: "FontAwesome"; content: "\f058"; margin: 0 5px 0 -15px; }
-.primary article ul li { margin-bottom: 15px; }
-.primary article ol li:before { content: none; }
-
-article table thead tr { background: #1fae4a; color: white; }
-article table tr:nth-child(2n) { background: #e0e3e5; }
-article table tr { background: #f1f1f1; }
-article table tr td { padding: 5px 10px; }
-
-/* ========================================================================== Footer ========================================================================== */
-footer { background: #111111; }
-footer hr { border-bottom: 1px solid #333333; margin: 5px 0; }
-footer .container .row { padding: 25px 0; }
-footer .container .row ul { padding-left: 0; padding-top: 5px; }
-footer .container .row ul li { list-style: none; float: left; }
-footer .container .row ul li a { color: #8c989e; text-decoration: none; padding: 0 10px; }
-footer .container .row ul li a:hover { color: #1fae4a; text-decoration: none; }
-footer .container .row ul li:after { content: "|"; color: #8c989e; }
-footer .container .row ul li:after:after:last-child { content: " "; }
-footer .container .row .social { text-align: center; }
-footer .container .row .social a { width: 30px; height: 30px; border-radius: 50%; font-size: 100%; background: #8c989e; line-height: 30px; display: block; margin-right: 15px; padding: 0 10px; float: right; color: #e1e1e1; }
-footer .container .row .social a:hover { background: #1fae4a; text-decoration: none; }
-footer .container .row .social a:first-child { margin-right: 0; }
-footer .container .row .copyright { text-align: center; font-size: 11px; color: #8c989e; }
-footer .row:last-child { padding: 20px 0; }
-
-/* ========================================================================== FEATURES / PAGE ELEMENTS ========================================================================== */
-/*___________________________ HOME PAGE ___________________________ */
-.banner { overflow: hidden; position: relative; padding: 0; margin-top: -95px; }
-
-.carousel .container { position: relative; z-index: 9; }
-.carousel .down-button { position: absolute; bottom: 40px; left: 47.5%; z-index: 10; width: 80px; height: 80px; line-height: 80px; font-size: 30px; color: white; }
-.carousel .item { height: 700px; }
-.carousel .item img { position: absolute; top: 0; left: 0; min-width: 100%; height: 100%; }
-.carousel .carousel-caption { background-color: transparent; width: 600px; margin: 0 auto; top: 20%; }
-.carousel .carousel-caption h1, .carousel .carousel-caption .carousel-caption p { margin: 0; line-height: 1.25; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
-.carousel .carousel-caption h1 { font-size: 50px; }
-.carousel .carousel-caption p { font-size: 22px; }
-.carousel .carousel-caption a.btn { padding: 10px 20px; font-size: 20px; text-transform: uppercase; background-color: transparent; border: 2px solid white; color: white; margin-top: 15px; }
-.carousel .carousel-control { z-index: 5; }
-.carousel .carousel-control .glyphicon-chevron-left, .carousel .carousel-control .glyphicon-chevron-right { top: 44%; background: #111111; height: 80px; width: 50px; line-height: 77px; color: white; }
-.carousel .carousel-control .glyphicon-chevron-left { left: 0; }
-.carousel .carousel-control .glyphicon-chevron-right { right: 0; }
-
-/*___________________________ BLOG PAGE ___________________________ */
-.blog article { border-bottom: 1px solid #e1e1e1; margin-bottom: 30px; }
-
-.comment-list footer { background: transparent; }
-
-.textwidget { padding: 10px; }
-
-/* ========================================================================== MODULES ========================================================================== */
-.gallery-block .gallery-item { padding-left: 0; padding-right: 0; }
-.gallery-block .gallery-item .image { height: 290px; }
-
-.listed-content .listed-content-icon, .listed-content .listed-content-image { margin-bottom: 20px; }
-
-.background-block { overflow: hidden; padding: 100px 0; position: relative; }
-.background-block img { left: 0; min-width: 100%; position: absolute; top: 0px; z-index: -1; }
-.background-block p { margin-bottom: 25px; }
-
-.callout { overflow: hidden; padding: 130px 0; position: relative; text-align: center; background: #4ec0c2; }
-.callout h2, .callout p { margin-bottom: 25px; color: white; }
-.callout h2 { font-size: 50px; }
-
-/* Page Heading */
-.page-intro { background: url('../images/headers/banner1.jpg?1433898993'); background-size: cover; color: white; }
-.page-intro .tint { padding: 30px 0; position: relative; }
-.page-intro .col-md-6:last-child { text-align: right; }
-.page-intro .col-md-6 a, .page-intro .page-intro .col-md-6 h1 { color: white; }
-.page-intro .col-md-6 h1 { margin-bottom: 0; }
-
-.breadcrumb { background: transparent; line-height: 40px; margin-bottom: 0; }
-
-.pagination .page-numbers { padding: 10px; background: #1fae4a; color: white; margin-right: 5px; border-radius: 4px; }
-
-.pagination .page-numbers.current { background: #4ec0c2; color: white; }
-
-nav.post-navigation { border-top: 1px solid #cccccc; padding-top: 20px; height: 80px; }
-
-nav .navigation { border-top: 1px solid #e1e1e1; padding-top: 25px; }
-
-nav .nav-links a { display: inline-block; color: white; background: #4ec0c2; padding: 2px 8px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
-nav .nav-links a:first-child { float: left !important; }
-nav .nav-links a:last-child { float: right; }
-
-/* ========================================================================== ADVERTISING ========================================================================== */
-.ad { margin: 0 auto; background: #f1f1f1; border: 1px solid white; overflow: hidden; }
-
-.ad:after { content: "Advertise here"; font-size: 13px; text-align: center; width: 100%; display: block; }
-
-.ad.leaderboard:after { line-height: 90px; }
-
-.ad.medrectangle:after { line-height: 250px; }
-
-.leaderboard { width: 728px; height: 90px; }
-
-.medrectangle { width: 300px; height: 250px; }
-
-/* ========================================================================== CLASSES ========================================================================== */
-/*___________________________ BUTTONS ___________________________ */
-.btn, a.btn, button.btn { color: white; background: #1fae4a; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
-.btn:hover, a.btn:hover, button.btn:hover { background: #4ec0c2; color: white; }
-
-/*___________________________ CLASSES ___________________________ */
-.spacing-container { padding: 20px 0; }
-
-.tint { background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; z-index: 1; }
-
-.icon { width: 40px; height: 40px; line-height: 40px; font-size: 100%; text-align: center; background: #1fae4a; color: white; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; margin: 0 auto; display: block; }
-.icon.large { width: 70px; height: 70px; line-height: 70px; font-size: 30px; }
-
-.icon-o { width: 40px; height: 40px; line-height: 40px; font-size: 100%; text-align: center; background: transparent; color: white; border: 2px solid white; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; margin: 0 auto; display: block; }
-
-.social .icon { display: inline-block; }
-
-.image-item .image { display: block; height: 190px; margin-bottom: 20px; overflow: hidden; }
-.image-item .image img { position: absolute; width: 100%; min-height: 100%; }
-
-.image-item:hover .image-hover-fx .image-overlay { opacity: 0.5; filter: alpha(opacity=50); }
-
-.image-item:hover .image-hover-fx .portfolio-zoom { display: block; left: 50%; margin-left: -35px; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
-
-.image-item:hover .image-hover-fx .title-fx { opacity: 1; transition: all 0.3s ease; }
-
-.image-hover-fx { position: relative; overflow: hidden; }
-.image-hover-fx .image-overlay { background-color: #1fae4a; width: 100%; height: 100%; display: block; position: absolute; top: 0; left: 0; opacity: 0; filter: alpha(opacity=0); -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
-.image-hover-fx .portfolio-zoom { width: 65px; height: 65px; text-align: center; background-color: #111111; display: none; line-height: 65px; position: absolute; top: 50%; left: -65px; margin-top: -22px; font-size: 30px; color: white; display: block; border-radius: 2px; }
-.image-hover-fx .portfolio-zoom:hover { background: #1fae4a; }
-.image-hover-fx .title-fx { position: absolute; bottom: 15%; color: white; text-align: center; width: 100%; font-size: 20px; opacity: 0; }
-
-/* ========================================================================== RESPONSIVE CSS ========================================================================== */
-@media (max-width: 979px) { body { padding-left: 0; padding-right: 0; }
-  .container.navbar-wrapper { margin-bottom: 0; width: auto; }
-  .navbar-inner { border-radius: 0; }
-  nav#access { float: none; background-color: #1fae4a; }
-  .nav-collapse .navbar-form, .nav-collapse .navbar-search { border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1; }
-  .navbar { height: auto; }
-  .carousel .item { height: 700px; }
-  .carousel img { width: auto; height: 383px; } }
-@media (max-width: 767px) { .row { padding-left: 15px; padding-right: 15px; }
-  nav { float: none; }
-  nav .nav, nav .nav li { display: block; }
-  .nav-collapse .navbar-form, .nav-collapse .navbar-search { border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1; }
-  .navbar-toggle .icon-bar { background: white; }
-  .navbar { height: auto; }
-  .navbar .navbar-collapse { background: #333333; }
-  .navbar .pull-right { float: none !important; }
-  .carousel { margin-left: -20px; margin-right: -20px; }
-  .carousel .item { height: 300px; }
-  .carousel img { height: 300px; }
-  footer .container { text-align: center; }
-  footer .container .pull-right { float: none !important; } }
+/*
+Syntax error: The line was indented 2 levels deeper than the previous line.
+        on line 15 of /Users/jolangreen/Documents/Work (personal)/SampleSite/Static-Site/sass/_page-all.sass
+        from line 47 of /Users/jolangreen/Documents/Work (personal)/SampleSite/Static-Site/sass/style.scss
+
+Backtrace:
+/Users/jolangreen/Documents/Work (personal)/SampleSite/Static-Site/sass/_page-all.sass:15
+/Users/jolangreen/Documents/Work (personal)/SampleSite/Static-Site/sass/style.scss:47
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:457:in `tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:345:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:274:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:139:in `block (2 levels) in compile'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:138:in `block in compile'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:137:in `compile'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:101:in `block in run'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/update_project.rb:45:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/bin/compass:30:in `block in <top (required)>'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/bin/compass:44:in `call'
+/Library/Ruby/Gems/2.0.0/gems/compass-0.12.7/bin/compass:44:in `<top (required)>'
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: The line was indented 2 levels deeper than the previous line.\A         on line 15 of /Users/jolangreen/Documents/Work (personal)/SampleSite/Static-Site/sass/_page-all.sass\A         from line 47 of /Users/jolangreen/Documents/Work (personal)/SampleSite/Static-Site/sass/style.scss"; }

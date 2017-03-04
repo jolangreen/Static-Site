@@ -43,3 +43,58 @@ $(function(){
     });
 });
 */
+
+
+// Contact Form Submission
+$("form[name=contactForm]").on('submit', function(e) {
+  e.preventDefault();
+
+  var passed = true, 
+    data = {};
+
+  // Check form fields
+  $('#contactForm [name]').each(function() {
+    if(!$(this).val()) {
+      $(this).addClass('error').css('border', '1px solid red');
+      passed = false;
+    } else {
+      var value = $(this).val();
+      var name = $(this).attr('name');
+      data[name] = value;
+    }
+  }); 
+
+  // Proceess Contact Form
+  if(passed === true) {
+    
+    console.log(data);
+
+    $.ajax({
+        url: $(this).attr("action"),
+        type: 'POST',
+        data: data,
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+
+  } else {
+    $('.error-message').show();
+  };
+
+
+/*
+  // Different Ways To Do AJAX Calls
+
+  $.post('contactform.php', function(data) {
+      // place success code here
+  })
+    .fail(function(data) {
+          // place error code here
+  });
+*/
+
+});

@@ -13,52 +13,47 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 
-//Images
+// Run 'gulp images' - Used to optimize images
 gulp.task('images', function() {
-    return gulp.src('public_html/assets/images/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('public_html/assets/images'))
-    .pipe(notify({ message: 'Images task complete' }));
+  return gulp.src('public_html/images/**/*')
+  .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+  .pipe(gulp.dest('public_html/images'))
+  .pipe(notify({ message: 'Images task complete' }));
 });
 
-
-//Scripts
+// Run 'gulp scripts' - Concatenates & minifies JS files
 gulp.task('scripts', function() {
-    return gulp.src(['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/*.js'])
-    //.pipe(jshint('.jshintrc'))
-    //.pipe(jshint.reporter('default'))
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('public_html/assets/js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('public_html/assets/js'))
-    .pipe(notify({ message: 'Scripts task complete' }));
+  return gulp.src(['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/*.js' ])
+  .pipe(concat('scripts.js'))
+  .pipe(rename({suffix: '.min'}))
+  .pipe(uglify())
+  .pipe(gulp.dest('public_html/js'))
+  .pipe(notify({ message: 'Scripts task complete' }));
 });
 
-
-// Compile Sass using compass
+// Run 'gulp stlyes' - Compile Sass using compass and minifies css
 gulp.task('styles', function() {
-   return gulp.src('sass/*.scss')
-     .pipe(compass({ config_file: './config.rb', css: 'public_html/assets/css', sass: 'sass' }))
-     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-     .pipe(livereload())
-     .pipe(rename({suffix: '.min'}))
-     .pipe(minifycss({ keepSpecialComments: 1 }))
-     .pipe(gulp.dest('public_html/assets/css'))
-     .pipe(notify({ message: 'Styles task complete' }));
- });
+  return gulp.src('sass/*.scss')
+  .pipe(compass({ config_file: './config.rb', css: 'public_html/css', sass: 'sass' }))
+  .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+  .pipe(rename({suffix: '.min'}))
+  .pipe(minifycss({ keepSpecialComments: 0 }))
+  .pipe(gulp.dest('public_html/css'))
+  .pipe(livereload())
+  .pipe(notify({ message: 'Styles task complete' }));
+});
 
 
 //Move 'bower_components' styles to 'assets'
 gulp.task('bowerstyles', function() {
     return gulp.src(['./bower_components/bootstrap/dist/css/bootstrap.css', './bower_components/fontawesome/css/font-awesome.css'])
-    .pipe(gulp.dest('./public_html/assets/css'));
+    .pipe(gulp.dest('./public_html/css'));
 });
 
 //Move 'bower_components' fonts to 'assets'
 gulp.task('bowerfonts', function() {
     return gulp.src(['./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eot,svg,otf}', './bower_components/fontawesome/fonts/**/*.{ttf,woff,eot,svg,otf}'])
-    .pipe(gulp.dest('./public_html/assets/fonts'));
+    .pipe(gulp.dest('./public_html/fonts'));
 });
 
 
@@ -92,12 +87,12 @@ gulp.task('watch', function() {
   var server = livereload();
 
   // Watch any files in public_html/assets/, reload on change
-  gulp.watch(['public_html/assets/**', 'public_html/index.html']).on('change', function(file) {
+  gulp.watch(['public_html/css/**', 'public_html/*.php']).on('change', function(file) {
     //server.changed(file.path);
   });
 
   livereload.listen();
-  gulp.watch(['sass/**', 'js/*.js', 'public_html/index.html']).on('change', livereload.changed);
+  gulp.watch(['sass/**', 'js/*.js', 'public_html/*.php']).on('change', livereload.changed);
 
 });
 

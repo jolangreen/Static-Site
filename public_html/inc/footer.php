@@ -30,7 +30,7 @@
 </footer>
 
 <!-- Scripts -->
-<script src="<? echo ROOT_PATH; ?>js/scripts.min.js"></script>
+<script src="<?php echo ROOT_PATH; ?>js/scripts.min.js"></script>
 <?php echo $insertScripts; ?>
 
 <!-- LiveReload -->

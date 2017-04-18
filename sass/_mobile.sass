@@ -3,21 +3,36 @@
    RESPONSIVE CSS
    ========================================================================== */
 
+.desktop-only
+    display: initial
+    +screen-md
+        display: none
+
+.mobile-only
+    display: none
+    +screen-md
+        display: initial
+
+
+//Anything less than 1199 (desktop fixes)
+//Anything less than 979 (all tablets)
+//Anything less than 767 (all phones)
+
+
 // Desktop at 1200px
-@media (max-width: $screen-lg)
++screen-xl
 
-// Desktop at 990px
-@media (max-width: $screen-md)
+// Desktop at 992px
++screen-lg
 
 
-// Tablet Portrait
-@media (min-width: $screen-sm) and (max-width: 769px)
+// Tablet Portrait Specific
+@media (min-width: 767px) and (max-width: 769px)
     .carousel .carousel-caption
         width: auto
 
-
-// Samsung Galaxy Note 2/ Iphone 6
-@media (max-width: $screen-sm)
+// Phones & Tablet Portrait   
++screen-md
     body
         padding-left: 0
         padding-right: 0
@@ -96,7 +111,8 @@
         .pull-right
             float: none !important
 
-//Iphone 4 / 5
-@media (max-width: $screen-xs)
-
-
+// Phone Specific - Samsung Galaxy Note 2/ Iphone 6 (width: 767)
++screen-sm 
+         
+//Iphone 4 / 5 (width: 320)
++screen-xs

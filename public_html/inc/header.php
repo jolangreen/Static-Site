@@ -30,10 +30,10 @@ function dataImage($path) {
 
     <?php echo $insertStyles; ?>
 
-    <link rel="icon" type="image/x-icon" href="<? echo BASE_URL; ?>favicon.ico" />
-    <link rel="stylesheet" href="<? echo ROOT_PATH; ?>css/bootstrap.css" />
-    <link rel="stylesheet" href="<? echo ROOT_PATH; ?>css/font-awesome.css" />
-    <link rel="stylesheet" href="<? echo ROOT_PATH; ?>css/style.min.css" />
+    <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>favicon.ico" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/bootstrap.css" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/font-awesome.css" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/style.min.css" />
     
 </head>
 

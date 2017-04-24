@@ -1,5 +1,5 @@
 <?php 
-$page_title = 'Official Court Transcriptionists Toronto & Durham Ontario | Transcript Service';
+$page_title = 'UntitledCompany';
 $page_description = 'At Toronto Durham Transcript Services our professional court transcriptionists have built a reputation of being reliable, accurate, and efficient. We obtain recordings from trial proceedings and transcribe the audio to produce transcripts.';
 $page_keywords = 'court, transcript, toronto, durham, transcription, contractor, online, court reporter, criminal, ontario, appeals, Bail Reviews, trials, ajax, whitby, pickering, scarborough, north york';
 ?>

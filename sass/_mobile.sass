@@ -3,17 +3,6 @@
    RESPONSIVE CSS
    ========================================================================== */
 
-.desktop-only
-    display: initial
-    +screen-md
-        display: none
-
-.mobile-only
-    display: none
-    +screen-md
-        display: initial
-
-
 //Anything less than 1199 (desktop fixes)
 //Anything less than 979 (all tablets)
 //Anything less than 767 (all phones)
@@ -61,49 +50,25 @@
         background: transparent
 
     .nav-collapse .navbar-form, .nav-collapse .navbar-search
-        border-top: 1px solid $clrBright
-        border-bottom: 1px solid $clrBright
+        border-top: 1px solid $color-bright
+        border-bottom: 1px solid $color-bright
 
     .navbar-toggle
         margin-right: 0
         .icon-bar
-            background: $clrDark
+            background: $color-dark
         
     .navbar
         height: auto
         .navbar-collapse
-            background: $clrDark
+            background: $color-dark
         
         .pull-right
             float: none !important
 
     nav#access
         float: none
-        background-color: $clrPrimary
-
-
-    // Banner
-    #main #banner
-        margin-top: 0
-
-    .carousel
-        .carousel-caption
-            width: auto
-            top: 0
-            left: auto
-            right: auto
-
-        .item
-            height: 300px
-
-        img
-            width: auto
-
-
-    .img-fit img
-        width: 100%
-
-
+        background-color: $color-primary
 
     footer .container
         text-align: center

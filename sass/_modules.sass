@@ -3,98 +3,52 @@
    ========================================================================== */
 
 
-// Gallery
-.gallery-block
-    .gallery-item
-        padding-left: 0
-        padding-right: 0
-        .image
-            height: 290px
+// ----- LIST -----
+.primary article
+    ul
+        list-style-type: none
+        padding-left: 15px
 
+        li:before
+            font-family: 'FontAwesome'
+            content: '\f00c'
+            margin: 0 5px 0 -15px
 
-//Listed Content
-.listed-content
-    .listed-content-icon, .listed-content-image
-        margin-bottom: 20px
+        li
+            margin-bottom: 15px
 
-
-
-//Background
-.background-block
-    overflow: hidden
-    padding: 100px 0 
-    position: relative
-    img
-        left: 0
-        min-width: 100%
-        position: absolute
-        top: 0px
-        z-index: -1
-    p
-        margin-bottom: 25px
-
-
-//Callout
-.callout
-    overflow: hidden
-    padding: 130px 0 
-    position: relative
-    text-align: center
-    background: $clrSecondary
-    h2, p
-        margin-bottom: 25px
-        color: $clrBrightest
-    h2
-        font-size: 50px
-        
-    &.background-image
-        background: none
-        img
-            left: 0
-            min-width: 100%
-            position: absolute
-            top: 0px
-            z-index: -1
+    ol li:before
+        content: none
 
 
 
-/* Page Heading */
-.page-intro
-    background: image-url("headers/banner1.jpg")
-    background-size: cover
-    color: $clrBrightest
+// ----- TABLE -----
+article table
+    thead tr
+        background: $color-primary
+        color: $color-brightest
 
-    .tint
-        padding: 30px 0
-        position: relative
+    tr:nth-child(2n)
+        background: #e0e3e5
 
-    .col-md-6:last-child
-        text-align: right
+    tr
+        background: #f1f1f1
 
-    .col-md-6 a, .page-intro .col-md-6 h1
-        color: $clrBrightest
-
-    .col-md-6 h1
-        margin-bottom: 0
-
-.breadcrumb
-    background: transparent
-    line-height: 40px
-    margin-bottom: 0
-
+    tr td
+        padding: 5px 10px
 
 
 // Pagination
 .pagination .page-numbers
     padding: 10px
-    background: $clrPrimary
-    color: $clrBrightest
+    background: $color-primary
+    color: $color-brightest
     margin-right: 5px
     border-radius: 4px
 
 .pagination .page-numbers.current
-    background: $clrSecondary
-    color: $clrBrightest
+    background: $color-secondary
+    color: $color-brightest
     
 nav.post-navigation
     +border(top, #ccc)
@@ -102,22 +56,20 @@ nav.post-navigation
     height: 80px
     
 nav .navigation
-    border-top: 1px solid $clrBright
+    border-top: 1px solid $color-bright
     padding-top: 25px
 
 nav .nav-links a
     display: inline-block
-    color: $clrBrightest
-    background: $clrSecondary
+    color: $color-brightest
+    background: $color-secondary
     padding: 2px 8px
     +border-radius(4px)
     &:first-child
         float: left !important
     &:last-child
         float: right
-
-
-
+   
 
 /* ==========================================================================
    ADVERTISING
@@ -132,7 +84,7 @@ nav .nav-links a
 
 .ad:after
     content: "Advertise here"
-    font-size: 13px
+    +font(13px)
     text-align: center
     width: 100%
     display: block

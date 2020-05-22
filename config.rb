@@ -11,11 +11,11 @@ environment = :development
 
 # Set this to the root of your project when deployed:
 http_path        = "/"
-css_dir          = "public_html/css"
+css_dir          = "www/css"
 sass_dir         = "sass"
-images_dir       = "public_html/images"
-fonts_dir        = "public_html/fonts"
-javascripts_dir  = "public_html/js"
+images_dir       = "www/images"
+fonts_dir        = "www/fonts"
+javascripts_dir  = "www/js"
 preferred_syntax = :sass
 
 # To enable relative paths to assets via compass helper functions. Uncomment:

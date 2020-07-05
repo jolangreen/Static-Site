@@ -10,7 +10,7 @@ environment = :development
 # require 'lemonade'
 
 # Set this to the root of your project when deployed:
-http_path        = "/"
+http_path        = "/www/"
 css_dir          = "www/css"
 sass_dir         = "sass"
 images_dir       = "www/images"
